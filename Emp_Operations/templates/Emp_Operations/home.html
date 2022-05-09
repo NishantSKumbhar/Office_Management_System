@@ -1,0 +1,30 @@
+{% extends 'Emp_Operations/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Welcome to Fork Infosystems, </h1>
+		<hr>
+		<h1 align="center">Office Management System</h1>
+		
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<a href="{% url 'emp-table' %}"><button type="button" class="btn btn-primary btn-lg">Employees Details</button></a>&nbsp;&nbsp;<br/><br/>
+
+				<a href="{% url 'emp-add' %}"><button type="button" class="btn btn-primary btn-lg">Add an Employee</button></a>
+
+				<a href="{% url 'emp-remove' %}"><button type="button" class="btn btn-primary btn-lg">Remove an Employee</button></a>&nbsp;&nbsp;<br/><br/>
+				<div align="right">
+				<a href="{% url 'emp-card' %}"><button type="button" class="btn btn-secondary btn-lg">Abstract View of Employee</button></a><br/></div>
+				<img src="https://www.cognisun.com/wp-content/uploads/2019/03/header-vector.png" height="300">
+				
+			</div>
+			<div class="col-md-6">
+				<img src="https://www.cflowapps.com/wp-content/uploads/2019/06/employee-working-on-back-office-operations.png" height="500">
+			</div>
+		</div>
+		
+		
+		
+	</div>
+	
+{% endblock content %}

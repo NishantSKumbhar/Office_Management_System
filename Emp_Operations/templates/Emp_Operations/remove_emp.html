@@ -1,0 +1,20 @@
+{% extends 'Emp_Operations/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Removing an Employee from Fork</h1>
+
+		<hr>
+		<div class="dropdown">
+		    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+			Select By id
+		    </button>
+				
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">{% for i in emps %}
+				    <li><a class="dropdown-item" href="remove_emp/{{ i.id }}">{{ i.f_name }} {{ i.l_name }}</a></li>
+				   	{% endfor %}
+				  </ul>
+				
+				
+		</div>
+	</div>
+{% endblock content %}

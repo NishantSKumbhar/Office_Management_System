@@ -1,0 +1,57 @@
+{% extends 'Emp_Operations/base.html' %}
+{% block content %}
+	<div class="container">
+		<h1>Adding an Employee to Fork...</h1>
+		<form class="row g-3" action="{% url 'emp-add' %}" method="post">
+			{% csrf_token %}
+		  <div class="col-md-6">
+		    <label for="first_name" class="form-label">First Name</label>
+		    <input type="text" class="form-control" name = "xfname" id="first_name" value="{{ f_name }}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="last_name" class="form-label">Last Name</label>
+		    <input type="text" class="form-control" name = "xlname" id="last_name" value="{{ l_name }}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="salary" class="form-label">Salary</label>
+		    <input type="number" class="form-control" name = "xsalary" id="salary" value="{{ salary }}">
+		  </div>
+		  <div class="col-md-4">
+		    <label for="bonus" class="form-label">Bonus</label>
+		    <input type="number" class="form-control" name = "xbonus" id="bonus" value="{{ bonus }}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="dept" class="form-label">Department</label>
+		    <input type="text" class="form-control" name = "xdepartment" id="dept" value="{{ department }}">
+		  </div>
+		  <div class="col-md-6">
+		    <label for="role" class="form-label">Role</label>
+		    <input type="text" class="form-control" name = "xrole" id="role" value="{{ role }}">
+		  </div>
+
+		  <div class="col-md-6">
+		    <label for="img" class="form-label">Profile Image url</label>
+		    <input type="text" class="form-control" name = "ximg" id="img" value="{{ img_url }}">
+		  </div>
+
+		  <div class="col-md-5">
+		    <label for="num" class="form-label">Contact Number</label>
+		    <input type="number" class="form-control" name = "xcnum" id="num" value="{{ phone_no }}">
+		  </div>
+
+		  <div class="col-md-6">
+		    <label for="locaion" class="form-label">Location</label>
+		    <input type="text" class="form-control" name = "xlocation" id="location" value="{{ location }}">
+		  </div>
+
+		  <div class="col-md-3">
+		    <label for="hiring_date" class="form-label">Hiring Date</label>
+		    <input type="date" class="form-control" name = "xhdate" id="hiring_date" value="{{ hr_date }}">
+		  </div>
+		  <div class="col-12">
+		    <button type="submit" class="btn btn-primary">Submit</button>
+		  </div>
+		</form>
+	</div>
+
+{% endblock content%}
